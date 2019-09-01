@@ -38,6 +38,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ipod825/vim-netranger'
 Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 "Auto-pairs"
