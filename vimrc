@@ -6,8 +6,11 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
-
-""" Tabs #tabs
+" Remap <Esc> to 'jk'
+inoremap jk <Esc>`^
+" Reduce <Esc> Lag
+set timeout timeoutlen=1000 ttimeoutlen=10
+" Tabs #tabs
 " - Two spaces wide
 set tabstop=2
 set softtabstop=2
@@ -37,9 +40,9 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ipod825/vim-netranger'
-Plug 'kien/ctrlp.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
 call plug#end()
 
 "Auto-pairs"
