@@ -41,11 +41,13 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ipod825/vim-netranger'
 Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-"Plug 'junegunn/fzf.vim'
+Plug 'matze/vim-move'
+"Plug 'tpope/vim-fugitive'
 call plug#end()
+"Vim-Move
+"let g:move_key_modifier = 'C'
 
-"Auto-pairs"
+"Auto-pairs
 let g:AutoPairsFlyMode = 1
 
 " Vim-JSX-Pretty
