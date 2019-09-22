@@ -34,11 +34,11 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 20
+    y: 10
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true 
 
   # Window decorations
   #
@@ -60,7 +60,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Windowed
+  startup_mode: Maximized
 
   # Window title
   #title: Alacritty
@@ -101,17 +101,17 @@ tabspaces: 8
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: 'Menlo'
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   #bold:
@@ -190,8 +190,8 @@ colors:
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
   #cursor:
-  #  text: '0x000000'
-  #  cursor: '0xffffff'
+    text: '0x000000'
+    cursor: '0xF92672'
 
   # Selection colors
   #
@@ -206,23 +206,41 @@ colors:
   normal:
     black:   '0x000000'
     red:     '0xF71735'
-    green:   '0x0FFF95'
+    green:   '0x37fb95'
     yellow:  '0xFFFC56'
-    blue:    '0x01CDFE'
-    magenta: '0x000000'
+    blue:    '0x00b5b5'
+    magenta: '0xFFFDAF'
     cyan:    '0x01CDFE'
     white:   '0xDBDED8'
+
+    #black:   #000000
+    #red:     #F71735
+    #green:   #37fb95
+    #yellow:  #FFFC56
+    #blue:    #00b5b5
+    #magenta: #FFFDAF
+    #cyan:    #01CDFE
+    #white:   #DBDED8
 
   # Bright colors
   bright:
     black:   '0x808080'
-    red:     '0xFF0000'
-    green:   '0x33ff00'
-    yellow:  '0xffff00'
-    blue:    '0x0066ff'
-    magenta: '0xcc00ff'
+    red:     '0xF71735'
+    green:   '0x37fb95'
+    yellow:  '0xfcfc66'
+    blue:    '0xba30ff'
+    magenta: '0xF92672'
     cyan:    '0x00ffff'
     white:   '0xffffff'
+
+    #black:   #808080
+    #red:     #fca93c
+    #green:   #37fb95
+    #yellow:  #fcfc66
+    #blue:    #ba30ff
+    #magenta: #F92672
+    #cyan:    #00ffff
+    #white:   #ffffff
 
   # Dim colors
   #
@@ -272,13 +290,13 @@ colors:
 visual_bell:
   animation: EaseOutExpo
   duration: 0
-  color: '0xffffff'
+  color: '0x37fb95'
 
 # Background opacity
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.95
+background_opacity: 0.90
 
 # Mouse bindings
 #

@@ -30,7 +30,7 @@ set guicursor=a:blinkon100
 "" Libraries
 call plug#begin()
 Plug 'sbdchd/neoformat'
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -42,7 +42,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ipod825/vim-netranger'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'matze/vim-move'
-"Plug 'tpope/vim-fugitive'
+Plug 'lilydjwg/colorizer'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'roxma/vim-tmux-clipboard'
 call plug#end()
 "Vim-Move
 "let g:move_key_modifier = 'C'
@@ -69,10 +71,10 @@ let g:neoformat_enabled_css = ['prettier-eslint', 'prettier']
 let g:neoformat_enabled_less = ['prettier-eslint', 'prettier']
 let g:neoformat_run_all_formatters = 1
 
-" NerdTree Settings
+" NerdTree Settings (using TMUX instead)
 " Open on Load
-autocmd VimEnter * NERDTree | wincmd p
-let NERDTreeShowHidden=1
+"autocmd VimEnter * NERDTree | wincmd p
+"let NERDTreeShowHidden=1
 
 " CocSettings
 " Use Tab for Autocomplete
@@ -101,3 +103,6 @@ endif
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
+
+" Comments Color
+:hi Comment guifg=#7E7F87
